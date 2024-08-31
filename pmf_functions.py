@@ -27,15 +27,14 @@ def log_unormalised_posterior(r, k, n, N, log_labour_prior):
 def fast_log_unormalised_posterior(r, k, n, N, log_labour_prior):
     """
     This function uses some simplified algebra so less factorial calculations take place
+    this will be different to log_unormalised_posterior by a scale factor
     """
     if k > min(n, r):
         return 0
     if k < max(0, n + r - N):
         return 0
-    # this will be different to log_unormalised_posterior by a scale factor
-    # therefore since it's log scale factor it is different by a shift
-    logit = log(factorial(r)) + log(factorial(N - r)) - log(factorial(r - k)) - log(factorial(N - r - n + k))
 
+    logit = log(factorial(r)) + log(factorial(N - r)) - log(factorial(r - k)) - log(factorial(N - r - n + k))
     logit += log_labour_prior[r]
 
     return logit
