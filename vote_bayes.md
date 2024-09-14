@@ -132,7 +132,7 @@ If we replace:
 
 $n$ with $N-n$, $x$ with $k-x$, $\alpha$ with $\alpha + x$, $\beta$ with $\beta + n-x$,
 
-We get a pmf that supports $k-x \in \set{0,1,...,N-n+x}$, equivalent to, $k \in \set{x,1,...,N-n+x}$.
+We get a pmf that supports $k-x \in \set{0,1,...,N-n}$, equivalent to, $k \in \set{x,1,...,N-n+x}$.
 
 $$
 \begin{align*}
