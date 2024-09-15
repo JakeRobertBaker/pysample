@@ -1,0 +1,10 @@
+name: pysample_env
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - matplotlib
+  - scipy
+  - ipykernel
+  - streamlit
+  - tqdm
